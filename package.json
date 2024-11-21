@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "type": "module",
     "scripts": {
-        "deploy:gh-page": "yarn build && gh-pages -d dist",
+        "deploy": "yarn build && gh-pages -d dist -t true",
         "dev": "vite",
         "build": "tsc && vite build",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
