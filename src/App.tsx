@@ -10,13 +10,14 @@ const DemoIndexInput: React.FC<{ readonly setCurrentIndex: (index: string) => vo
     const [indexInputValue, setIndexInputValue] = React.useState<string>(DEFAULT_INDEX);
 
     return (
-        <div className="text-white flex items-center gap-2">
+        <div className="text-white flex items-center gap-2 w-full">
             <span>Currently used index: </span>
             <input
+                style={{ width: '350px' }}
                 type="text"
                 value={indexInputValue}
                 onChange={(e) => setIndexInputValue(e.target.value)}
-                className="text-gray-800 border border-gray-300 rounded-md px-4 py-2"
+                className="text-gray-800 border border-gray-300 rounded-md px-4 py-2 "
             />
             <button
                 onClick={() => setCurrentIndex(indexInputValue)}
@@ -33,7 +34,7 @@ export const App: React.FC = () => {
 
     return (
         <div>
-            <div className="flex flex-col gap-4 p-4 border-b border-gray-300 bg-[#fd564d] mb-6">
+            <div className="flex flex-col gap-4 p-4  bg-[#fd564d] mb-6">
                 <h1 className="text-white text-3xl font-bold">
                     AddSearch Demo (incl. Conversational Search)
                 </h1>
@@ -45,6 +46,7 @@ export const App: React.FC = () => {
                     publicSiteKey={currentIndex}
                     primaryColor="#fd564d"
                     customFont="Poppins"
+                    searchFieldMaxWithInPixels={600}
                     searchFieldHeaderText="Search"
                     searchButtonText="Search"
                     searchInputPlaceholderText="What are you looking for?"
