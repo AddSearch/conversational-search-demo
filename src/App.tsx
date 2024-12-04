@@ -2,7 +2,7 @@ import React from 'react';
 import { AddSearchUiIntegration } from 'react-addsearch-ui';
 import 'react-addsearch-ui/dist/style.css';
 
-const DEFAULT_INDEX = '2c32bf3eb06b30af5f8208481aea3e8b';
+const DEFAULT_INDEX = '490c606d6377e1876fa7fecb5f7e6420';
 
 const DemoIndexInput: React.FC<{ readonly setCurrentIndex: (index: string) => void }> = ({
     setCurrentIndex
@@ -46,7 +46,7 @@ export const App: React.FC = () => {
                     publicSiteKey={currentIndex}
                     primaryColor="#fd564d"
                     customFont="Poppins"
-                    searchFieldMaxWithInPixels={600}
+                    searchFieldMaxWidthInPixels={600}
                     searchFieldHeaderText="Search"
                     searchButtonText="Search"
                     searchInputPlaceholderText="What are you looking for?"
